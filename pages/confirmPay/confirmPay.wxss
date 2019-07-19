@@ -1,0 +1,158 @@
+/* pages/confirmPay/confirmPay.wxss */
+.company{
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 50rpx;
+  height: 50rpx;
+}
+.companyName{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.goodDemo{
+  width: 100%;
+  display: flex;
+}
+.checkBox{
+  width: 58rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.goodMsg{
+  width: 100%;
+  display: flex;
+}
+.goodImg{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.goodContent{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+}
+.goodName{
+  font-size: 30rpx;
+}
+.goodPic{
+  width: 198rpx;
+  height: 198rpx;
+  border-radius: 10rpx;
+}
+.btn{
+  width: 163rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  background-color: #dededc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectNum{
+  width: 160rpx;
+  display: flex;
+}
+.reduceBtn{
+  flex: 1;
+}
+.inputView{
+  flex: 1;
+}
+.addBtn{
+  flex: 1;
+}
+.numBtn{
+  width: 40rpx;
+  height: 40rpx
+}
+.input{
+  text-align: center;
+  font-size: 27rpx;
+  font-weight: bolder;
+}
+.price{
+  font-size: 30rpx;
+}
+.people{
+  font-size: 24rpx;
+}
+.l_flex{
+  flex: 3;
+}
+.commission{
+  font-size: 30rpx;
+  flex: 2;
+}
+.bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.footer{
+  width: 100%;
+  min-height: 94rpx;
+  display: flex;
+  
+}
+.l_footer{
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20rpx;
+}
+.r_footer{
+  flex: 2;
+  background-color: #FFDA44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 34rpx;
+  
+}
+.alignRight{
+  text-align: right;
+}
+.carNumberTitle{
+  border-left: 14rpx solid #FFDA44;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.carNumberRow{
+  width: 100%;
+  height: 94rpx;
+  display: flex;
+  /* background-color: #FFDA44; */
+  background-color:#FF5644
+}
+.l_carNumberRow{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+.r_carNumberRow{
+  flex: 5;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.carIcon{
+  width: 64rpx;
+  height: 64rpx;
+}
+input[placeholder]{
+  color:white
+}

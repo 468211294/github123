@@ -1,0 +1,48 @@
+{
+      "pages": [
+            "pages/index/index",
+            "pages/form/form",
+            "pages/code/code",
+            "pages/login/login",
+            "pages/withdrawApprication/withdrawApprication",
+            "pages/withdraw/withdraw",
+            "pages/myTeam/myTeam",
+            "pages/paySuccess/paySuccess",
+            "pages/confirmPay/confirmPay",
+            "pages/withdrawDetail/withdrawDetail",
+            "pages/saleCenter/saleCenter",
+            "pages/center/center",
+            "pages/goodList/goodList",
+            "pages/myOrder/myOrder",
+            "pages/logs/logs"
+        
+      ],
+      "window": {},
+      "tabBar": {
+        "color": "#707070",
+        "selectedColor": "#ffda44",
+        "backgroundColor": "#ffffff",
+        "list": [
+          {
+            "selectedIconPath": "images/index1.png",
+            "iconPath": "images/index.png",
+            "pagePath": "pages/index/index",
+            "text": "商城"
+          },
+          {
+            "selectedIconPath": "images/code1.png",
+            "iconPath": "images/code.png",
+            "pagePath": "pages/code/code",
+            "text": "推广码"
+          },
+          {
+            "selectedIconPath": "images/center1.png",
+            "iconPath": "images/center.png",
+            "pagePath": "pages/center/center",
+            "text": "个人中心"
+          }
+        ]
+      },
+    
+      "sitemapLocation": "sitemap.json"
+}

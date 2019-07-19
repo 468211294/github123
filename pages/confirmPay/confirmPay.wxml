@@ -1,0 +1,82 @@
+<!--pages/confirmPay/confirmPay.wxml-->
+<!--pages/goodList/goodList.wxml-->
+<view id='confirmPay'>
+  <!--  -->
+  <!-- 厂家名称 -->
+  <view class='company pl-20'>
+    <image src='{{unitlogo}}' class='logo'></image>
+    <text class='companyName'>{{unitname}}</text>
+  </view>
+  <!-- 商品列表 -->
+  <view class='goodList pl-20 pr-20'>
+      <view class='goodDemo pd-20' wx:for="{{goods}}" wx:for-index="idx">
+        <!-- <view class='checkBox'>
+           <radio value="{{item.goodName}}" color='#FFDA44'/>
+        </view> -->
+        <view class='goodMsg'>
+          <view class='goodImg'>
+            <image src='{{item.cover}}' class='goodPic'></image>
+          </view>
+          <view class='goodContent'>
+            <view class='goodName'>{{item.name}}</view>
+            <view><text class='price red'>不含税价:￥{{item.price}}</text></view>
+            <view class='flex'>
+              <!--选择类型  -->
+              <view class='l_flex'>
+                <view class='btn'>{{item.selectModel}}</view>
+              </view>
+              <!-- 佣金 -->
+              <view class='commission red xRight'>赚￥{{item.totalCommission}}
+              </view>
+            </view>
+            <!-- 购买数量 -->
+            <view class='xRight'>
+              <view class='selectNum'>
+                <view class='reduceBtn xLeft'>
+                  <image src='/images/reduce.png' class='numBtn' data-idx='{{idx}}' bindtap='reduceNum'></image>
+                </view>
+                <view class='inputView'>
+                  <input type='number' class='input' value='{{item.number}}'></input>
+                </view>
+                <view class='addBtn xRight'>
+                  <image src='/images/add.png' class='numBtn' data-idx='{{idx}}' bindtap='addNum'></image>
+                </view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    <!-- </checkbox-group> -->
+  
+  </view>
+  
+  
+  <!-- 结算 -->
+  <view class='bottom'>
+  <!-- 输入提货车牌号 -->
+    <view>
+      <!-- <view class="carNumberTitle pl-20">确认提货车牌号</view> -->
+      <view class="carNumberRow">
+        <view class="l_carNumberRow">
+          <image src="/images/car.png" class="carIcon"></image>
+          <!-- 车牌号: -->
+        </view>
+        <view class="r_carNumberRow">
+          <input type="text" placeholder="请输入车牌号" placeholder-style="color:white;opacity:0.7" value="{{carNumber}}" bindinput="inputCarNumber"></input>
+        </view>
+      </view>
+    </view>
+  <!-- ====== -->
+  <view class="footer top-border">
+    <view class='l_footer'>
+      <view>
+        <view class='fs34'>合计:<text class='fs44 red'>￥{{totalPrice}}</text></view>
+        <view class='fs28 alignRight'>总返利:<text class='red'>￥{{totalRebate}}</text></view>
+      </view>
+    </view>
+    <view class='r_footer' bindtap='confirm'>确认支付</view>
+  </view>
+  </view>
+</view>
+

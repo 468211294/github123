@@ -1,0 +1,36 @@
+<!--pages/form/form.wxml-->
+<view id="form">
+  <!-- 昵称 -->
+  <form bindsubmit="formSubmit">
+    <view class='row'>
+      <view class='l_row'>昵称:</view>
+      <view class='r_row'>
+        <input type='text'name="name" value="{{name}}" placeholder='请输入昵称'></input>
+      </view>
+    </view>
+    <view class='row'>
+      <view class='l_row'>手机号:</view>
+      <view class='r_row'>
+        <input type='text' name="phone" value="{{phone}}" placeholder='请输入手机号'></input>
+      </view>
+    </view>
+    <view class='row'>
+      <view class='l_row'>性别:</view>
+      <view class='r_row'>
+        <radio-group class="radio-group" bindchange="radioChange" name="sex">
+        <view class='radioRow'>
+          <view  wx:for="{{items}}">
+            <label class="radio">
+              <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.label}}
+            </label>
+          </view>
+        </view>
+        </radio-group>
+      </view>
+    </view>
+    <!-- <view class='row'> -->
+    <button class='btn' form-type="submit">提交</button>
+   </form>
+
+  <!-- </view> -->
+</view>

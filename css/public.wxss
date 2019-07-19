@@ -1,0 +1,207 @@
+/* 全局样式 */
+
+
+/* tab切换样式 */
+.tabList{
+  width: 100%;
+  height: 73rpx;
+  display: flex;
+  background-color: white
+}
+.tab{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #FFDA44;
+  color:#FFDA44;
+}
+._tab{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eeeeee;
+}
+/* 正文字体颜色 */
+.text{
+  color:#323232;
+  font-size: 22rpx;
+}
+.fs20{
+  font-size: 20rpx;
+}
+.fs24{
+  font-size: 24rpx;
+}
+.fs28{
+  font-size: 28rpx;
+}
+.fs34{
+  font-size: 34rpx;
+}
+.fs44{
+  font-size: 44rpx;
+}
+.bold{
+  font-weight: bold;
+}
+.red{
+  color: #ff5644;
+}
+.gray{
+  color:#666666;
+}
+/* padding 内边距 */
+.pl-20{
+  padding-left: 20rpx;
+}
+.pr-20{
+  padding-right: 20rpx;
+}
+.pt-20{
+  padding-top:20rpx;
+}
+.pd-20{
+  padding-bottom:20rpx;
+}
+.padding20{
+  padding:20rpx;
+}
+/* margin 外边距 */
+.md-20{
+  margin-bottom: 20rpx;
+}
+/* border */
+.bottom-border{
+  border-bottom: 1px solid #eeeeee;
+}
+.top-border{
+  border-top: 1px solid #eeeeee;
+}
+/* flex 布局 */
+.flex{
+  display: flex;
+}
+.flex-1{
+  flex: 1;
+}
+.flex-2{
+  flex: 2;
+}
+.flex-3{
+  flex:3
+}
+.xyCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xRight{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.xLeft{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.yCenter{
+  display: flex;
+  align-items: center;
+}
+
+
+/*  重写 radio 样式  */
+/* 未选中的 背景样式 */
+radio .wx-radio-input{
+   border-radius: 100%;/* 圆角 */
+   width: 39rpx;
+   height: 39rpx;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+   border: none;
+   background: #FFDA44;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 背景的宽 */
+   height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: none;
+   background: #FFDA44;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+
+
+.textBlock{
+  display: block;
+}
+.textCenter{
+  text-align: center;
+}
+.yellow{
+  color:#ffda44
+}
+.blue{
+  color:#12b4d7
+}
+/* 遮罩层 */
+
+/* 底部自定义导航 */
+.tabBar{
+  width: 100%;
+  height: 107rpx;
+  background-color: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  position: fixed;
+  bottom:0;
+  z-index: 998;
+}
+/* 绝对居中 */
+.abCenter{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -o-transform:translateX(-50%) translateY(-50%);
+  font-size: 30rpx;
+  border-radius: 20rpx;
+}

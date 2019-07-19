@@ -1,0 +1,71 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view id='withdraw'>
+<!-- 头部信息 -->
+  <view class='header'>
+    <view class='account'>
+      <view>
+        <view class='remaining bold'>账户余额:{{headMsg.remaining}}</view>
+        <view class='remainingToday'>今日剩余提现金额:{{headMsg.remainingToday}}</view>
+      </view>
+    </view>
+    <view class='title bold'>提现金额(元)</view>
+    <view class='withdrawInputBox'>
+      <input type="number" class='withdrawInput' placeholder='请输入金额' bindinput="inputMonth"></input>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class='content'>
+    <view class='contentTitle'>选择提现方式</view>
+    <view class='withdrawList'>
+      <view class='{{item.select?"_option":"option"}}' wx:for="{{payOptions}}" data-payment="{{item.value}}" data-index='{{index}}' bindtap='selectPay'>
+        <view class='optionText'>
+          <image src='{{item.imgUrl}}' class='{{item.value=="0"?"wx_icon":item.value=="1"?"zfb_icon":"bank_icon"}}'></image><text>{{item.label}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="formList">
+      <form bindsubmit="formSubmit">
+        <!-- 收款户名 -->
+        <view class='inputBg' wx:if="{{bank}}">
+          <view class='l_inputBg'>收款户名:</view>
+          <view class='r_inputBg'>
+            <input type='text' placeholder='请输入收款人户名' name="bankAccountName"></input>
+          </view>
+        </view>
+        <!-- 收款账户 -->
+        <view class='inputBg' wx:if="{{bank}}">
+          <view class='l_inputBg'>收款账号:</view>
+          <view class='r_inputBg'>
+            <input type='text' placeholder='请输入收款账号' name="bankCardNumber"></input>
+          </view>
+        </view>
+        <!-- 收款银行 -->
+        <view class='inputBg' wx:if="{{bank}}">
+          <view class='l_inputBg'>收款银行:</view>
+          <view class='r_inputBg'>
+            <input type='number' placeholder='请输入收款银行名称' name="bankName"></input>
+          </view>
+        </view>
+        <!-- 支付宝实名 -->
+        <view class='inputBg' wx:if="{{alipay}}">
+          <view class='l_inputBg'>支付宝户名:</view>
+          <view class='r_inputBg'>
+            <input type='number' placeholder='请输入支付宝实名名称' name="alipayName"></input>
+          </view>
+        </view>
+        <!-- 支付宝账号 -->
+        <view class='inputBg' wx:if="{{alipay}}">
+          <view class='l_inputBg'>支付宝账号:</view>
+          <view class='r_inputBg'>
+            <input type='number' placeholder='请输入支付宝账号' name="alipayAccount"></input>
+          </view>
+        </view>
+        <button form-type="submit" class='submitBtn'>提交申请</button>
+      </form>
+    </view>
+    
+    <!-- <view class='formList'></view> -->
+    
+
+  </view>
+</view>

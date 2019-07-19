@@ -1,0 +1,33 @@
+/* pages/withdrawDetail/withdrawDetail.wxss */
+page {  
+  /* display: block;  
+  overflow: auto; */
+  width: 100%;
+  height: 100%;
+  background-color: #eee; 
+  
+}
+#withdrawDetail{
+  padding: 20rpx;
+  /* width: 100%; */
+  overflow: auto;
+}
+.demo{
+  width: 100%;
+  height: 147rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  display: flex;
+  margin-bottom: 20rpx
+}
+.moneyIcon{
+  width: 68rpx;
+  height: 68rpx;
+}
+.moneyStyle{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}

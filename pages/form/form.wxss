@@ -1,0 +1,50 @@
+/* pages/form/form.wxss */
+page{
+  /* width: 100%; */
+  padding: 40rpx;
+  box-sizing:border-box;
+}
+.row{
+  display: flex;
+  height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.l_row{
+  flex:3;
+  display: flex;
+  align-items: center;
+}
+.r_row{
+  flex:11;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+.right{
+  width: 35rpx;
+  height: 35rpx;
+}
+.radioRow{
+  display: flex;
+}
+.radio{
+  margin-right: 20rpx;
+}
+.btn{
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFDA44;
+  color:#323232;
+  position: absolute;
+  top:85%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -o-transform:translateX(-50%) translateY(-50%);
+}

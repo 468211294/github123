@@ -1,0 +1,90 @@
+<!--pages/saleCenter/saleCenter.wxml-->
+<view id='saleCenter'>
+  <view class='header pl-20 pr-20'>
+    <!-- 个人信息 -->
+    <view class='peopleMsg'>
+      <view class='l_peopleMsg'>
+        <image src='{{peopleMsg.headIcon}}' class='headImg'></image>
+      </view>
+      <view class='r_peopleMsg'>
+        <view>
+          <text class='userName'>{{peopleMsg.userName}}</text>
+          <text class='userAcount'>{{peopleMsg.userAcount}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 可提现佣金 -->
+    <view class='withdraw'>
+      <view class='l_withdraw'>
+        <view>
+          <text class='textBlock title'>可提现佣金(元)</text>
+          <text class='textBlock money'>{{peopleMsg.commission}}</text>
+        </view>
+      </view>
+      <view class='r_withdraw'>
+        <view class='withdrawBtn' bindtap="skip_withDraw">提现</view>
+      </view>
+    </view>
+    <!-- 佣金明细 -->
+    <view class='withdrawDetail'>
+      <view class='l_withdrawDetail'>
+        <view class='textCenter'>
+          <text class='textBlock'>{{peopleMsg.commissionDetail[0].label}}</text>
+          <text class='textBlock'>{{peopleMsg.commissionDetail[0].value}}</text>
+        </view>
+      </view>
+      <view class='r_withdrawDetail left-border'>
+        <view class='textCenter'>
+          <text class='textBlock'>{{peopleMsg.commissionDetail[1].label}}</text>
+          <text class='textBlock'>{{peopleMsg.commissionDetail[1].value}}</text>        
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='entryBox'>
+      <view class='t_entryBox'>
+        <view class='l_t_entryBox'>
+          <view class="box" bindtap='skip_myOrder'>
+            <view>
+              <image src='/images/commission_icon.png' class='commission_icon'></image>
+            </view>
+            <view>订单佣金</view>
+            <!-- <view><text class='red'>{{entryMsg.orderCommission}}</text>元</view> -->
+          </view>
+        </view>
+        <view class='r_t_entryBox'>
+          <view class="box" bindtap='skip_withdrawDetail'>
+            <view>
+              <image src='/images/withdraw_icon.png' class='withdraw_icon'></image>
+            </view>
+            <view>提现明细</view>
+            <!-- <view><text class='red'>{{entryMsg.withdrawDetail}}</text>元</view> -->
+          </view>
+        </view>
+      </view>
+      <view class='b_entryBox'>
+        <view class='l_b_entryBox'>
+          <view class='box' bindtap='skip_myTeam'>
+            <view>
+              <image src='/images/member.png' class='member'></image>
+            </view>
+            <view>我的分销</view>
+            <!-- <view><text class='red'>{{entryMsg.myMember}}</text>人</view> -->
+          </view>
+        </view>
+        <view class='r_b_entryBox'>
+          <view class='box' bindtap='skip_code'>
+            <view>
+              <image src='/images/qr_code.png' class='qr_code'></image>
+            </view>
+            <view>推广二维码</view>
+          </view>  
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

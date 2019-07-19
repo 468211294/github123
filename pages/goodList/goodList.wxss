@@ -1,0 +1,278 @@
+/* pages/goodList/goodList.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.company{
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 50rpx;
+  height: 50rpx;
+}
+.companyName{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+.goodDemo{
+  width: 100%;
+  display: flex;
+}
+.checkBox{
+  width: 58rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.goodMsg{
+  width: 100%;
+  display: flex;
+}
+/*  */
+.goodImg{
+  width: 198rpx;
+  height: 198rpx;
+  border-radius: 10rpx;
+  position: relative;
+  /* flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.goodContent{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+}
+.goodName{
+  font-size: 30rpx;
+}
+.saleIcon{
+  width: 49rpx;
+  height: 57rpx;
+  border-top-left-radius: 10rpx;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+/*  */
+/* .goodPic{
+  width: 198rpx;
+  height: 198rpx;
+  border-radius: 10rpx;
+} */
+.btn{
+  width: 163rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  background-color: #dededc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectNum{
+  width: 160rpx;
+  display: flex;
+}
+.reduceBtn{
+  flex: 1;
+}
+.inputView{
+  flex: 1;
+}
+.addBtn{
+  flex: 1;
+}
+.numBtn{
+  width: 40rpx;
+  height: 40rpx
+}
+.input{
+  text-align: center;
+  font-size: 27rpx;
+  font-weight: bolder;
+}
+.price{
+  font-size: 30rpx;
+}
+.people{
+  font-size: 24rpx;
+}
+.l_flex{
+  flex: 3;
+}
+.commission{
+  font-size: 30rpx;
+  flex: 2;
+}
+.footer{
+  width: 100%;
+  height: 94rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+.l_footer{
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20rpx;
+}
+.r_footer{
+  flex: 2;
+  background-color: #FFDA44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 34rpx;
+  
+}
+.alignRight{
+  text-align: right;
+}
+#mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+#popUp{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  z-index:999;
+}
+.popUpHead{
+  width: 100%;
+  height: 80rpx;
+  border-bottom:1px solid #eee;
+  display: flex;
+}
+.l_popUpHead{
+  width: 145rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m_popUpHead{
+  flex:1;
+}
+.r_popUpHead{
+  width: 145rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popUpContent{
+  /* flex: 1; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.typeOptionView{
+  width: 49%;
+  height: 80rpx;
+  /* border:1rpx solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.option{
+  width: 300rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._option{
+  width: 300rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  background-color: #FFDA44;
+  /* border: 1px solid #eee; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prompt{
+  min-width: 300rpx;
+  padding: 30rpx;
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyGoods{
+  width: 128rpx;
+  height: 158rpx;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+.writePhoneBox{
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index:999;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -o-transform:translateX(-50%) translateY(-50%);
+}
+.t_writePhoneBox{
+ width: 100%;
+ height: 80rpx;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-bottom: 1rpx solid #eee;
+}
+.m_writePhoneBox{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.b_writePhoneBox{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top:1rpx solid #eee;
+}
+.gotoBtn{
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFDA44;
+}

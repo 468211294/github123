@@ -1,0 +1,17 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view id='paySuccess'>
+<view class='mt250'>
+  <image src='/images/success.png' class='success'></image>
+</view>
+<view class='title'>{{title}}</view>
+<view class='prompt'>{{prompt}}</view>
+<view class='btnList'>
+  <view class='btn mt130' bindtap='skip_myOrder'>查看订单</view>
+</view>
+<view class='btnList mt30'>
+  <view class='btn' bindtap='skip_index'>返回首页</view>
+</view>
+
+
+
+</view>

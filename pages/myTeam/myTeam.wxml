@@ -1,0 +1,40 @@
+<!--pages/myTeam/myTeam.wxml-->
+<view id='myTeam'>
+  <view class='tabList'>
+    <view class="{{item.select?'tab':'_tab'}}" wx:for="{{tabOptions}}" catchtap='changeTab' data-index="{{index}}">{{item.label}}</view>
+  </view>
+  <view class='content'>
+    <!-- 会员模板 -->
+    <view class='demo' wx:for="{{teams}}">
+      <view class='a'>
+        <image src="{{index==0?'/images/first.png':index==1?'/images/second.png':index==2?'/images/third.png':''}}" class='icon'></image>
+      </view>
+      <view class='b'>
+        <!-- <image src='{{item.headImg}}' class='headImg'></image> -->
+        <view class='headImg' style='border-radius: 100%;background:url("https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epcYx3xPa8TBib7lbFAj3B55DPC1EJC6CPEvibKl9lawrV5DzVkfPVS5pvF13S0hgogVaaXtv0x5KiaA/132") no-repeat center center;background-size:89rpx 89rpx;'></view>
+      </view>
+      <view class='c'>
+        <view>
+          <view class='fs24'>用户名:{{item.source_username}}</view>
+          <view class='fs24'>分销总金额:<text class='red'>{{item.profit}}</text></view>
+          <!-- <view class='fs24'>分销总订单:<text class='red'>100</text><text>张</text></view> -->
+          <view class='memberMsg'>
+            <view class='referrer'>推荐人:{{item.target_username}}</view>
+            <!-- <image src='/images/people.png' class='people'></image><text class='yellow bold'>100</text> -->
+          </view>
+        </view>
+      </view>
+      <view class='d'>
+        <view>
+          <view>总佣金</view>
+          <view class='bold yellow'>￥{{item.promotion}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 底部 -->
+<view class='footer' wx:if="{{footer}}">共{{count}}人</view>
+<!-- 空标志 -->
+<image src='/images/noMember.png' class='noMember' wx:if="{{empty}}"></image>

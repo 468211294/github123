@@ -1,0 +1,205 @@
+/* pages/myOrder/myOrder.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #eeeeee;  
+}
+.content{
+  padding: 20rpx;
+  position: relative;
+}
+.orderDemo{
+  width: 100%;
+  background-color: white;
+  border-radius: 10rpx;
+}
+.t_orderDemo,
+.b_orderDemo{
+  width: 100%;
+  height: 62rpx;
+  display: flex;
+}
+.m_orderDemo{
+  width: 100%;
+  display: flex;
+}
+.l_m_orderDemo{
+  width: 190rpx;
+  height: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.r_m_orderDemo{
+  flex: 1;
+
+}
+.goodName{
+
+}
+.goodDetail{
+  width: 100%;
+  display: flex;
+}
+.l_goodDetail{
+  flex: 3;
+  padding-top: 10rpx;
+  /* color: # */
+
+}
+.r_goodDetail{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 26rpx;
+}
+
+.l_t_orderDemo{
+  flex: 7;
+  display: flex;
+  align-items: center;
+}
+.l_b_orderDemo{
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+}
+.r_t_orderDemo{
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.r_b_orderDemo{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+.goodImg{
+  width: 154rpx;
+  height: 154rpx;
+}
+.btn{
+  width: 140rpx;
+  height: 40rpx;
+  border-radius: 5rpx;
+  background-color: #FFDA44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redBtn{
+  width: 140rpx;
+  height: 40rpx;
+  border-radius: 5rpx;
+  background-color: #ff5644;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -o-transform:translateX(-50%) translateY(-50%);
+  z-index: 999
+}
+.canvas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 998
+}
+.emptyIcon{
+  width: 128rpx;
+  height: 158rpx;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+
+#mask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+.writePhoneBox{
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index:999;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  -ms-transform:translateX(-50%) translateY(-50%);
+  -moz-transform:translateX(-50%) translateY(-50%);
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  -o-transform:translateX(-50%) translateY(-50%);
+}
+.t_writePhoneBox{
+ width: 100%;
+ height: 80rpx;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-bottom: 1rpx solid #eee;
+}
+.m_writePhoneBox{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.b_writePhoneBox{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  border-top:1rpx solid #eee;
+}
+.l_b_writePhoneBox{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l_border{
+  border-left: 1rpx solid #eee;
+}
+.gotoBtn{
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFDA44;
+}

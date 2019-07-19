@@ -1,0 +1,96 @@
+/* pages/myTeam/myTeam.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #eee;  
+}
+.content{
+  padding: 20rpx;
+}
+.demo{
+  width: 100%;
+  height: 138rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  padding-bottom:10rpx;
+  padding-top: 10rpx;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.a{
+  width: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.b{
+  width: 103rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.headImg{
+  width: 89rpx;
+  height: 89rpx;
+}
+.d{
+  width: 168rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.referrer{
+  width: 110rpx;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #ff5644;
+  border-radius: 5rpx;
+  font-size: 15rpx;
+}
+.people{
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 20px;
+}
+.memberMsg{
+  display: flex;
+  align-items: center;
+}
+/* .allCommission{
+
+} */
+.footer{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFDA44;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  font-size: 28rpx;
+}
+.noMember{
+  width: 128rpx;
+  height: 158rpx;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+}

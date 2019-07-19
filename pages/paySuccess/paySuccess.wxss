@@ -1,0 +1,43 @@
+/* pages/paySuccess/paySuccess.wxss */
+#paySuccess{
+  text-align: center;
+}
+.success{
+  width: 220rpx;
+  height: 220rpx;
+}
+.title{
+  font-size: 45rpx;
+}
+.prompt{
+  color: #848484;
+  font-size: 30rpx;
+  text-align: left;
+  padding-left: 150rpx;
+  padding-right: 150rpx;
+  padding-top: 40rpx;
+}
+.btnList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width: 320rpx;
+  height: 62rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  background-color: #ffda44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mt130{
+  margin-top: 130rpx;
+}
+.mt30{
+  margin-top: 30rpx;
+}
+.mt250{
+  margin-top: 180rpx;
+}

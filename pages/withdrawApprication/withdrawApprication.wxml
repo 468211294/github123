@@ -1,0 +1,19 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view id='paySuccess'>
+<view class='mt250'>
+  <image src='/images/success.png' class='success'></image>
+</view>
+<view class='title'>{{title}}</view>
+<view class='time'>(审核时间:14:00-17:30)</view>
+<view class='btnList'>
+  <view class='l_btnList'>
+    <text catchtap='skip_saleCenter'>分销中心</text>
+  </view>
+  <view class='r_btnList'>
+    <text catchtap='skip_withdrawDetail'>提现明细</text>
+  </view>
+</view>
+
+
+
+</view>

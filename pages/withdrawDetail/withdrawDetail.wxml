@@ -1,0 +1,24 @@
+<!--pages/withdrawDetail/withdrawDetail.wxml-->
+<view id='withdrawDetail'>
+  <view class='header'></view>
+  <!--提现明细demo -->
+  <view class='demo' wx:for="{{withdrawDetail}}">
+    <view class=' xyCenter flex-1'>
+      <image src='/images/moneyIcon.png' class='moneyIcon'></image>
+    </view>
+    <view class='yCenter flex-3'>
+      <view>
+        <text class='{{item.status=="finished"?"textBlock yellow":"textBlock"}}'>{{item.stateText}}</text>
+        <text class='textBlock fs24 gray'>{{item.created_at}}</text>
+      </view> 
+    </view>
+    <view class='{{item.status=="finished"?"moneyStyle yellow":"moneyStyle"}}'>
+      <text wx:if="{{item.status=='finished'}}">+</text>{{item.amount}}
+    </view>
+  </view>
+
+
+
+
+
+</view>

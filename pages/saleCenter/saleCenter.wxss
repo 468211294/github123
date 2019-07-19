@@ -1,0 +1,151 @@
+/* pages/saleCenter/saleCenter.wxss */
+.header{
+  background-color: #FFDA44;
+  padding-bottom: 40rpx;
+}
+.peopleMsg{
+  width: 100%;
+  height: 153rpx;
+  display: flex;
+  border-bottom: 1px solid black
+}
+.l_peopleMsg{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.r_peopleMsg{
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+.headImg{
+  width:102rpx;
+  height: 102rpx;
+  border-radius: 100%;
+}
+.userName{
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.userAcount{
+  display: block;
+  font-size: 30rpx;
+}
+.withdraw{
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+}
+.l_withdraw{
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+.r_withdraw{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.withdrawBtn{
+  width: 110rpx;
+  height: 60rpx;
+  border-radius: 9rpx;
+  color:white;
+  background-color: #FF5644;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+}
+.title{
+  font-size: 21rpx;
+}
+.money{
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+.withdrawDetail{
+  width: 100%;
+  /* height: 66rpx; */
+  display: flex;
+}
+.l_withdrawDetail,
+.r_withdrawDetail{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.left-border{
+  border-left: 1px solid black;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.entryBox{
+  width: 491rpx;
+  height: 422rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 115rpx;
+}
+.t_entryBox{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.b_entryBox{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+.l_t_entryBox{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.r_t_entryBox{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #eee;
+}
+.l_b_entryBox{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  border-right: 1px solid #eee;
+}
+.r_b_entryBox{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.commission_icon{
+  width: 65rpx;
+  height: 65rpx;
+}
+.withdraw_icon{
+  width: 78rpx;
+  height: 59rpx;
+}
+.member{
+  width: 79rpx;
+  height: 65rpx;
+}
+.qr_code{
+  width: 76rpx;
+  height: 76rpx;
+}
+.box{
+  text-align: center;
+}

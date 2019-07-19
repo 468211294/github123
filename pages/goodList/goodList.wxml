@@ -1,0 +1,102 @@
+<!--pages/goodList/goodList.wxml-->
+<view id='goodList'>
+  <!-- 厂家名称 -->
+  <view class='company pl-20'>
+    <image src='{{company.logo}}' class='logo'></image>
+    <text class='companyName'>{{company.name}}</text>
+  </view>
+  <!-- 商品列表 -->
+  <view class='goodList pl-20 pr-20'>
+    <!-- <checkbox-group bindchange="checkboxChange"> -->
+      <!-- <label class="checkbox" wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label> -->
+      <checkbox-group bindchange="selectGood">
+        <view class='goodDemo pd-20' wx:for="{{goods}}" wx:for-index="idx">
+          <view class='checkBox'>
+            <!--  <checkbox value="{{item.goodName}}"/> -->
+            <checkbox value="{{item._id}}" color='#FFDA44'/>
+          </view>
+          <view class='goodMsg'>
+            <view class='goodImg' style='background:url("{{item.cover}}");background-repeat:no-repeat;background-size:198rpx 198rpx'>
+              <image src='/images/saleIcon.png' class='saleIcon' wx:if="{{item.is_recommended}}"></image>
+              <!-- <image  class='goodPic'></image> -->
+            </view>
+            <view class='goodContent'>
+              <view class='goodName'>{{item.name}}</view>
+              <view><text class='price red'>不含税价:￥{{item.price}}</text></view>
+              <view class='flex'>
+                <!--选择类型  -->
+                <view class='l_flex'>
+                    <view class='btn' data-idx='{{idx}}' bindtap='selectType'>{{item.selectModel}}
+                    </view>
+                </view>
+                <!-- 佣金 -->
+                <view class='commission red xRight'>赚￥{{item.totalCommission}}
+                </view>
+              </view>
+              <!-- 购买数量 -->
+              <view class='xRight'>
+                <view class='selectNum'>
+                  <view class='reduceBtn xLeft'>
+                    <image src='/images/reduce.png' class='numBtn' data-idx='{{idx}}' bindtap='reduceNum'></image>
+                  </view>
+                  <view class='inputView'>
+                    <input type='number' class='input' value='{{item.number}}'></input>
+                  </view>
+                  <view class='addBtn xRight'>
+                    <image src='/images/add.png' class='numBtn' data-idx='{{idx}}' bindtap='addNum'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </checkbox-group>
+    <!-- </checkbox-group> -->
+  
+  </view>
+  <!-- 结算 -->
+  <view class='footer top-border'>
+    <view class='l_footer'>
+      <view>
+        <view class='fs34'>合计:<text class='fs44 red'>￥{{totalPrice}}</text></view>
+        <view class='fs28 alignRight'>总返利:<text class='red'>￥{{totalRebate}}</text></view>
+      </view>
+    </view>
+    <view class='r_footer' bindtap='closeAccount'>结算</view>
+  </view>
+</view>
+<!-- 遮罩层 -->
+<view id='mask' wx:if="{{show}}">
+</view>
+<!-- 商品类型选择弹窗 -->
+<view id='popUp' wx:if="{{show}}">
+  <view class='popUpHead'>
+    <view class='l_popUpHead' catchtap='cancel'>取消</view>
+    <view class='m_popUpHead'></view>
+    <view class='r_popUpHead' catchtap="confirm">确定</view>
+  </view>
+  <view class='popUpContent'>
+    <view class='typeOptionView' wx:for="{{typeArr}}">
+      <view class='{{item.select?"_option":"option"}}' bindtap="selectOption" data-index="{{index}}">{{item.size}}</view>
+    </view>
+
+  
+  </view>
+
+</view>
+<!--弹窗提示 -->
+<view class='prompt abCenter' wx:if="{{prompt}}">{{promptText}}</view>
+<!-- 输入手机号码弹窗提示 -->
+<view id='mask' wx:if="{{dialog}}"></view>
+<view class="writePhoneBox" wx:if="{{dialog}}">
+  <view class="t_writePhoneBox">提示</view>
+  <view class="m_writePhoneBox">请前往个人中心填写手机号码</view>
+  <view class="b_writePhoneBox">
+    <button class="gotoBtn" bindtap="skip_form">前往</button>
+  </view>
+</view>
+<!-- 无商品图标 -->
+<image src='/images/emptyGoods.png' class='emptyGoods' wx:if="{{empty}}"></image>

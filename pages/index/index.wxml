@@ -1,0 +1,125 @@
+
+<view  id="index">
+  <view class='mask' wx:if="{{show}}">
+  </view>
+  <view class='popUpWindow' wx:if="{{show}}">
+      <view class='t_popUpWindow'>需要您的授权</view>
+      <view class='m_popUpWindow'>
+        为了提供更好的服务需要获得您的公开信息(昵称,头像等)
+      </view>
+      <view class='b_popUpWindow'>
+        <button type='primary'size="mini" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >我知道了</button>
+        <!-- <view >我知道了</view> -->
+      </view>
+    </view>
+<!--banner  -->
+<swiper indicator-dots="{{banner.indicatorDots}}"
+  autoplay="{{banner.autoplay}}" interval="{{banner.interval}}" duration="{{banner.duration}} "class='swiper'>
+    <swiper-item  wx:for="{{bannerImg}}">
+      <image src="{{item.src}}" class="banner"/>
+    </swiper-item>
+</swiper>
+<!--实时滚动条  -->
+<view class="rowScroll">
+  <view class="l_rowScroll">
+    <view class='rowScrollTitle'>
+      实时交易
+    </view>
+  </view>
+  <view class="r_rowScroll">
+     <view style='transform:translateX({{marquee}}px);white-space:nowrap;white-space:pre;'>{{scrollMsg}}</view>
+  </view>
+</view>
+<view class='mainContent'>
+      <!--功能入口  -->
+      <view class='entry'>
+            <view class='l_entry'>
+                  <view class='entryBox' bindtap='skip_myOrder'>
+                        <image src='/images/myOrder.png' class='entryIcon'/>
+                        <text>我的订单</text>
+                  </view>
+            </view>
+            <view class='r_entry'>
+                  <view class='entryBox'>
+                        <image src='/images/mySale.png' class='entryIcon'/>
+                        <text>我的分销</text>
+                  </view>
+            </view>
+      </view>
+      <!--最新优惠  -->
+      <view>
+            <view class='boardTitleList'>
+                  <view class='boardTitle'>最新优惠</view>
+            </view>
+            <view class='boardContent'>
+                  <view class='l_boardContent' wx:for="{{goods}}">
+                        <view class='goodBox' data-shop="{{item.shop._id}}" data-unitname="{{item.shop_username}}" data-unitlogo="{{item.shop.headphoto}}" bindtap='skip_saleGood'>
+                          <view class='goodImg' style="background:url('{{item.cover}}') no-repeat center center;background-size:235rpx 235rpx"></view>
+                               <!-- <image src="{{item.imgUrl}}" class='goodImg'/> -->
+                              <!-- <view class='goodImg' style="background:url('{{item.imgUrl}}') center;background-size: 235rpx 235rpx;"></view> -->
+
+                              <view class='goodName'>{{item.name}}</view>
+                              <view class='goodPrice'>
+                                    <text class='price'>￥{{item.types[0].price}}</text>
+                                    <!-- <text class='buyPeople'>{{item.buyPeople}}人付款</text> -->
+                              </view>
+                        </view>
+                  </view>
+            </view>
+      </view>
+      <!--品牌厂家  -->
+      <view class='brandCompanyDiv'>
+            <view class='boardTitleList'>
+                  <view class='boardTitle'>品牌厂家</view>
+            </view>
+            <view class='boardContent2'>
+                  <view class='brandCompanyBox' wx:for="{{companys}}" data-id="{{item._id}}" data-unitname="{{item.username}}" data-unitlogo="{{item.headphoto}}"bindtap='skip_goodList'>
+                        <image src='{{item.headphoto}}' class='companyLogo'/>
+                        <text class='companyName'>{{item.username}}</text>
+                  </view>
+            </view>
+
+      </view>
+      <!--关于我们  -->
+      <view>
+            <view class='boardTitleList'>
+                <view class='boardTitle'>
+                    关于我们
+                </view>
+            </view>
+            <view class='boardContent fs20'>
+                {{aboutUs.content}}
+            </view>
+      </view>
+      <!--联系方式  -->
+      <view>
+        <view class='boardTitleList'>
+            <view class='boardTitle'>
+                联系方式
+            </view>
+        </view>
+        <view class='boardContent fs20'>
+          <view class='phoneView'>
+            <view class='phoneBox' bindtap='callPhone'>
+              <image src='/images/phone_icon.png' class='iphone2'></image>
+              <text class='contectTitle'>{{aboutUs.phone}}</text>
+            </view>  
+          </view>
+          <view class='addressView'>
+            <view class='addressBox'>
+              <image src='/images/location_icon.png' class='location'></image>
+              <text class='contectTitle'>{{aboutUs.address}}</text>
+            </view>  
+          </view> 
+        </view>
+      </view>
+</view>
+<!-- 客服按钮 -->
+<view class='customerServiceBtn'>
+  <!-- <image src='/images/customerService.png' class='customerService'></image>
+  <text class='kefu'>在线客服</text> -->
+  <button open-type="contact" bindcontact="handleContact" class="kefuBtn"></button>
+</view>
+
+
+</view>

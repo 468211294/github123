@@ -1,0 +1,49 @@
+<!--pages/center/center.wxml-->
+<view id='center'>
+  <view class='header'>
+    <view class='peopleMsg'>
+      <view class='l_peopleMsg'>
+        <image src='{{peopleMsg.headIcon}}' class='headIcon'></image>
+      </view>
+      <view class='m_peopleMsg'>
+        <view>
+          <text class='userName'>{{peopleMsg.userName}}</text>
+          <text class='userAcount'>{{peopleMsg.userAcount}}</text>
+        </view>
+      </view>
+      <view class='r_peopleMsg' bindtap='skip_form'>
+        <image src='/images/right.png' class='editIcon'></image>
+      </view>
+    </view>
+    <view class='peopleData'>
+      <view class='l_peopleData' wx:for="{{peopleMsg.data}}">
+        <view>
+          <view class='alignCenter'><text wx:if="{{index==2}}">￥</text>{{item.value}}</view>
+          <view class='alignCenter'>{{item.label}}</view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+  <!-- 功能入口 -->
+  <view class='entry pl-20 pr-20'>
+    <view class='row'>
+      <view class='l_row'>
+        <image src='/images/centerEntry1.png' class='entryImg' bindtap='skip_myOrder'></image>
+      </view>
+      <view class='r_row'>
+        <image src='/images/centerEntry2.png' class='entryImg' bindtap='skip_saleCenter'></image>
+      </view>
+    </view>
+    <view class='row'>
+      <view class='l_row'>
+        <image src='/images/centerEntry3.png' class='entryImg' bindtap='skip_myTeam'></image>
+      </view>
+      <view class='r_row'>
+        <image src='/images/centerEntry4.png' class='entryImg' bindtap='skip_withdrawDetail'></image>
+      </view>
+    </view>
+
+  </view>
+
+</view>
